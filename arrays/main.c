@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
 	bzero(dynArr, sizeof(dynArr));
 	printDynamic(dynArr, size);
 	setDynamic(dynArr, 0, 1, size);
-	insertDynamic(dynArr, 1, 2, &size);
+	insertDynamic(&dynArr, 1, 2, &size);
+	deleteDynamic(&dynArr, 0, &size);
 
 	return 0;
 }
