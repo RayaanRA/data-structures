@@ -23,5 +23,8 @@ int main(int argc, char *argv[]) {
 	deleteDynamic(&dynArr, 0, &size);
 	search(dynArr, 7, size);
 
+	free(dynArr);
+	dynArr = NULL;
+
 	return 0;
 }
