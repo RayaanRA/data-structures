@@ -14,11 +14,14 @@ int main(int argc, char *argv[]) {
 	// Dynamic Array
 	int *dynArr = (int*) malloc(sizeof(int) * 10);
 	size = 10;
-	bzero(dynArr, sizeof(dynArr));
+	for (int i = 0; i < size; i++) {
+		dynArr[i] = i;
+	}
 	printDynamic(dynArr, size);
-	setDynamic(dynArr, 0, 1, size);
-	insertDynamic(&dynArr, 1, 2, &size);
+	setDynamic(dynArr, 15, 1, size);
+	insertDynamic(&dynArr, 1, 7, &size);
 	deleteDynamic(&dynArr, 0, &size);
+	search(dynArr, 7, size);
 
 	return 0;
 }
